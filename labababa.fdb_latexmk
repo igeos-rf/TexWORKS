@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber labababa"] 0 "labababa.bcf" "labababa.bbl" "labababa" 1771078422.04843 0
+["biber labababa"] 0 "labababa.bcf" "labababa.bbl" "labababa" 1771273702.06641 0
   "labababa.bcf" 0 -1 0 "pdflatex"
   "literatura.bib" 0 -1 0 ""
   (generated)
   "labababa.bbl"
   "labababa.blg"
   (rewritten before read)
-["pdflatex"] 1771072605.4326 "/home/ivan/TexWORKS/labababa.tex" "labababa.pdf" "labababa" 1771078422.04901 0
+["pdflatex"] 1771273698.9061 "/home/ivan/TexWORKS-1/labababa.tex" "labababa.pdf" "labababa" 1771273702.06702 0
   "/home/ivan/.texlive2025/texmf-var/fonts/tfm/lh/lh-t2a/labx1200.tfm" 1771005814.43608 3308 eee81981029f67083258db36df06e523 ""
   "/home/ivan/.texlive2025/texmf-var/fonts/tfm/lh/lh-t2a/labx1440.tfm" 1771005829.28258 3304 6a543c07045572737981351171e0505e ""
   "/home/ivan/.texlive2025/texmf-var/fonts/tfm/lh/lh-t2a/labx1728.tfm" 1771005807.43057 3312 d199be9bd555944e2403193d58a0256a ""
@@ -15,7 +15,7 @@
   "/home/ivan/.texlive2025/texmf-var/fonts/tfm/lh/lh-t2a/larm1200.tfm" 1771005792.02172 3240 c2435f2b5cd66d4930bc29b8df87967e ""
   "/home/ivan/.texlive2025/texmf-var/fonts/tfm/lh/lh-t2a/larm1440.tfm" 1771005822.12701 3256 3daaa33cf35cf3f354983aa3214ecd7f ""
   "/home/ivan/.texlive2025/texmf-var/fonts/tfm/lh/lh-t2a/larm1728.tfm" 1771005800.8325 3252 92d08740ce00199d6cf9ff4aaada81d1 ""
-  "/home/ivan/TexWORKS/labababa.tex" 1771072598.50277 18095 d5216973ea299bd6961c5b0cb8b307ca ""
+  "/home/ivan/TexWORKS-1/labababa.tex" 1771273698.39659 18144 6439300ce57999bbb2e8977c61cbedc9 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc" 1136849721 3141 82d5616418ed8d5de703b3951bedecb4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -290,11 +290,11 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1771004388 5541377 824b1e5beafd2ebda40585373b35bb6b ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1771004469 3636389 8bb4b5e9b0e0638476eb04c36d5bd75b ""
   "/usr/local/texlive/2025/texmf.cnf" 1771004380.23761 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "labababa.aux" 1771078421.62594 548 88cf3b7e6255d535261064aaf333e663 "pdflatex"
+  "labababa.aux" 1771273701.5946 548 88cf3b7e6255d535261064aaf333e663 "pdflatex"
   "labababa.bbl" 0 -1 0 "biber labababa"
-  "labababa.out" 1771078421.62894 101 b7d1335694762d923923b81f53de8552 "pdflatex"
-  "labababa.run.xml" 1771078421.63794 2597 4eea08bc90d7143b4687a57a53695523 "pdflatex"
-  "labababa.tex" 1771072598.50277 18095 d5216973ea299bd6961c5b0cb8b307ca ""
+  "labababa.out" 1771273701.5976 101 b7d1335694762d923923b81f53de8552 "pdflatex"
+  "labababa.run.xml" 1771273701.60909 2597 4eea08bc90d7143b4687a57a53695523 "pdflatex"
+  "labababa.tex" 1771273698.39659 18144 6439300ce57999bbb2e8977c61cbedc9 ""
   (generated)
   "labababa.aux"
   "labababa.bcf"
