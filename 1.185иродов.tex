@@ -1,0 +1,149 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{cmap}
+\usepackage[english, russian]{babel}
+\usepackage{wrapfig}
+\usepackage[backend=biber,style=gost-numeric]{biblatex} % стиль ГОСТ
+\addbibresource{literatura.bib}
+\usepackage{misccorr} % в заголовках появляется точка, но при ссылке на них ее нет
+\usepackage{amssymb,amsfonts,amsmath,amsthm}  
+\usepackage{indentfirst}
+\usepackage[usenames,dvipsnames]{color} 
+\usepackage[unicode,hidelinks]{hyperref}
+% \hypersetup{%
+%     pdfborder = {0 0 0}
+\usepackage{multirow}
+\usepackage{makecell,multirow} 
+\usepackage{ulem}
+%\usepackage{hyperref}
+%\usepackage{graphicx,wrapfig}
+%\renewcommand\epsilon{\varepsilon}
+% \renewcommand\epsilon{\varepsilon}
+%\graphicspath{{img/}}
+\usepackage{geometry}
+\geometry{left=1cm,right=1cm,top=2cm,bottom=2cm,bindingoffset=0cm,headheight=15pt}
+\usepackage{fancyhdr} 
+\linespread{1.2} 
+\frenchspacing 
+\renewcommand{\labelenumii}{\theenumii)} 
+% \usepackage{caption}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\labauthor{Сарафанов И.Г.}
+\def\labauthors{\labauthor}
+\def\labnumber{127}
+\def\labtheme{Таблица производных и интегралов}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%применим колонтитул к стилю страницы
+\pagestyle{fancy} 
+	%очистим "шапку" страницы
+\fancyhead{\LaTeX} 
+	%слева сверху на четных и справа на нечетных
+\fancyhead[L]{\labauthors} 
+	%справа сверху на четных и слева на нечетных
+\fancyhead[R]{Иродов \textnumero 1.186} 
+	%очистим "подвал" страницы
+\fancyfoot{} 
+	% номер страницы в нижнем колинтуле в центре
+\fancyfoot[C]{\thepage} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{float}
+\usepackage[mode=buildnew]{standalone}
+\usepackage{tikz} 
+% \usepackage{subcaption}
+\usepackage{tikz,csvsimple,physics}
+\makeatother
+%\usepackage{booktabs}
+\usepackage{pgfplots, pgfplotstable}
+\usepackage[outline]{contour}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+
+\begin{document}
+\begin{center}
+\subsection*{Домашняя работа \textnumero 5}
+\end{center}
+
+\textbf{Условие:} Частица 1 ударяет покоящуюся частицу 2. После удара они разлетаются симметрично под углом $60^\circ$ между направлениями. Найти отношение масс.
+
+\bigskip
+
+\textbf{Решение}
+Импульс системы сохраняется, так как внешние силы пренебрежимо малы во время короткого удара:
+
+\[
+\vec P_\text{до} = \vec P_\text{после}
+\]
+
+До удара:
+
+\[
+P_y = 0
+\]
+
+После удара одна частица отклоняется вверх, другая вниз, угол между направлениями $60^\circ$ $\Rightarrow$ каждая отклоняется на $30^\circ$ от оси $x$  
+
+\vspace{2em}
+Применим \textit{ЗСИ} по оси $y$:
+\[
+m_1 v_1 \sin 30^\circ - m_2 v_2 \sin 30^\circ = 0
+\]
+
+Отсюда:
+
+\[
+m_1 v_1 = m_2 v_2
+\]
+
+Применим \textit{ЗСИ} по оси $x$:
+
+\[
+m_1 v_0 = m_1 v_1 \cos 30^\circ + m_2 v_2 \cos 30^\circ
+\]
+
+Подставляем $m_2 v_2 = m_1 v_1$:
+
+\[
+m_1 v_0 = m_1 v_1 (\cos 30^\circ + \cos 30^\circ) = 2 m_1 v_1 \cos 30^\circ
+\]
+
+\[
+v_1 = \frac{v_0}{2 \cos 30^\circ} = \frac{v_0}{\sqrt{3}}
+\]
+
+\[
+v_2 = \frac{m_1}{m_2} v_1 = \frac{v_1 m_1}{m_2}
+\]
+
+Применим \textit{ЗСМЭ:}
+
+\[
+\frac{1}{2} m_1 v_0^2 = \frac{1}{2} m_1 v_1^2 + \frac{1}{2} m_2 v_2^2
+\]
+
+Подставляем $v_2 = \frac{m_1}{m_2} v_1$:
+
+\[
+\frac{1}{2} m_1 v_0^2 = \frac{1}{2} m_1 v_1^2 + \frac{1}{2} m_2 \left(\frac{m_1}{m_2} v_1\right)^2 = \frac{1}{2} m_1 v_1^2 + \frac{1}{2} \frac{m_1^2}{m_2} v_1^2
+\]
+
+\[
+m_1 v_0^2 = v_1^2 \left( m_1 + \frac{m_1^2}{m_2} \right) = v_1^2 m_1 \left( 1 + \frac{m_1}{m_2} \right)
+\]
+
+\[
+\frac{v_0^2}{v_1^2} = 1 + \frac{m_1}{m_2} \quad \Rightarrow \quad \frac{v_0^2}{(v_0^2/3)} = 3
+\]
+
+\[
+1 + \frac{m_1}{m_2} = 3 \quad \Rightarrow \quad \frac{m_1}{m_2} = 2
+\]
+
+\[
+\boxed{\frac{m_1}{m_2} = 2}
+\]
+\end{document}

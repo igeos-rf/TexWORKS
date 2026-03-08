@@ -1,0 +1,119 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{cmap}
+\usepackage[english, russian]{babel}
+\usepackage{wrapfig}
+\usepackage[backend=biber,style=gost-numeric]{biblatex} % стиль ГОСТ
+\addbibresource{literatura.bib}
+\usepackage{misccorr} % в заголовках появляется точка, но при ссылке на них ее нет
+\usepackage{amssymb,amsfonts,amsmath,amsthm}  
+\usepackage{indentfirst}
+\usepackage[usenames,dvipsnames]{color} 
+\usepackage[unicode,hidelinks]{hyperref}
+% \hypersetup{%
+%     pdfborder = {0 0 0}
+\usepackage{multirow}
+\usepackage{makecell,multirow} 
+\usepackage{ulem}
+%\usepackage{hyperref}
+%\usepackage{graphicx,wrapfig}
+%\renewcommand\epsilon{\varepsilon}
+% \renewcommand\epsilon{\varepsilon}
+%\graphicspath{{img/}}
+\usepackage{geometry}
+\geometry{left=1cm,right=1cm,top=2cm,bottom=2cm,bindingoffset=0cm,headheight=15pt}
+\usepackage{fancyhdr} 
+\linespread{1.2} 
+\frenchspacing 
+\renewcommand{\labelenumii}{\theenumii)} 
+% \usepackage{caption}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\labauthor{Сарафанов И.Г.}
+\def\labauthors{\labauthor}
+\def\labnumber{127}
+\def\labtheme{Таблица производных и интегралов}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%применим колонтитул к стилю страницы
+\pagestyle{fancy} 
+	%очистим "шапку" страницы
+\fancyhead{\LaTeX} 
+	%слева сверху на четных и справа на нечетных
+\fancyhead[L]{\labauthors} 
+	%справа сверху на четных и слева на нечетных
+\fancyhead[R]{Иродов \textnumero1.137} 
+	%очистим "подвал" страницы
+\fancyfoot{} 
+	% номер страницы в нижнем колинтуле в центре
+\fancyfoot[C]{\thepage} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{float}
+\usepackage[mode=buildnew]{standalone}
+\usepackage{tikz} 
+% \usepackage{subcaption}
+\usepackage{tikz,csvsimple,physics}
+\makeatother
+%\usepackage{booktabs}
+\usepackage{pgfplots, pgfplotstable}
+\usepackage[outline]{contour}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+
+% вот этот удивительный мир
+
+\begin{document}
+% Задание 3389
+\section*{3389}
+Найти \(\displaystyle \frac{\partial^2 z}{\partial x^2},\; \frac{\partial^2 z}{\partial x \partial y},\; \frac{\partial^2 z}{\partial y^2}\) при \(x = 1,\; y = -2,\; z = 1\), если
+\[ x^2 + 2y^2 + 3z^2 + xy - z - 9 = 0. \]
+
+% Задание 3410
+\section*{3410}
+Пусть функция \(z = z(x, y)\) определяется системой уравнений:
+\[
+\begin{cases} 
+x = e^{u + v}, \\ 
+y = e^{u - v}, \\ 
+z = uv 
+\end{cases}
+\]
+(\(u\) и \(v\) — параметры). Найти \(dz\) и \(d^2z\) при \(u = 0\) и \(v = 0\).
+
+% Задание 3411
+\section*{3411}
+Найти \(\displaystyle \frac{\partial z}{\partial x}\) и \(\displaystyle \frac{\partial^2 z}{\partial x^2}\), если
+\[z = x^2 + y^2,\]
+где \(y = y(x)\) определяется из уравнения
+\[x^2 - xy + y^2 = 1.\]
+
+% Задание 3412
+\section*{3412}
+Найти \(\displaystyle \frac{\partial u}{\partial x}\) и \(\displaystyle \frac{\partial u}{\partial y}\), если
+\[u = \frac{x + z}{y + z},\]
+где \(z\) определяется из уравнения
+\[ze^z = xe^x + ye^y.\]
+
+% Задание 3413
+\section*{3413}
+Пусть уравнения
+\[x = \varphi(u, v),\; y = \psi(u, v),\; z = \chi(u, v)\]
+определяют \(z\) как функцию от \(x\) и \(y\). Найти \(\displaystyle \frac{\partial z}{\partial x}\) и \(\displaystyle \frac{\partial z}{\partial y}\).
+
+% Задание 3414
+\section*{3414}
+Пусть
+\[x = \varphi(u, v),\; y = \psi(u, v).\]
+Найти частные производные первого и второго порядков от обратных функций: \(u = u(x, y)\) и \(v = v(x, y)\).
+
+% Задание 3415
+\section*{3415}
+Найти \(\displaystyle \frac{\partial u}{\partial x},\; \frac{\partial u}{\partial y},\; \frac{\partial v}{\partial x},\; \frac{\partial v}{\partial y}\), если:
+\begin{enumerate}
+    \item[a)] \(x = u \cos \dfrac{v}{u},\; y = u \sin \dfrac{v}{u};\)
+    \item[б)] \(x = e^u + u \sin v,\; y = e^u - u \cos v.\)
+\end{enumerate}
+\end{document}

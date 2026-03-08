@@ -1,0 +1,164 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{cmap}
+\usepackage[english, russian]{babel}
+\usepackage{wrapfig}
+\usepackage[backend=biber,style=gost-numeric]{biblatex} % стиль ГОСТ
+\addbibresource{literatura.bib}
+\usepackage{misccorr} % в заголовках появляется точка, но при ссылке на них ее нет
+\usepackage{amssymb,amsfonts,amsmath,amsthm}  
+\usepackage{indentfirst}
+\usepackage[usenames,dvipsnames]{color} 
+\usepackage[unicode,hidelinks]{hyperref}
+% \hypersetup{%
+%     pdfborder = {0 0 0}
+\usepackage{multirow}
+\usepackage{makecell,multirow} 
+\usepackage{ulem}
+%\usepackage{hyperref}
+%\usepackage{graphicx,wrapfig}
+%\renewcommand\epsilon{\varepsilon}
+% \renewcommand\epsilon{\varepsilon}
+%\graphicspath{{img/}}
+\usepackage{geometry}
+\geometry{left=1cm,right=1cm,top=2cm,bottom=2cm,bindingoffset=0cm,headheight=15pt}
+\usepackage{fancyhdr} 
+\linespread{1.2} 
+\frenchspacing 
+\renewcommand{\labelenumii}{\theenumii} 
+% \usepackage{caption}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\labauthor{Сарафанов И.Г.}
+\def\labauthors{\labauthor}
+\def\labnumber{127}
+\def\labtheme{Таблица производных и интегралов}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%применим колонтитул к стилю страницы
+\pagestyle{fancy} 
+	%очистим "шапку" страницы
+\fancyhead{} 
+	%слева сверху на четных и справа на нечетных
+\fancyhead[L]{\labauthors} 
+	%справа сверху на четных и слева на нечетных
+\fancyhead[R]{Погрешности для Лизы} 
+	%очистим "подвал" страницы
+\fancyfoot{} 
+	% номер страницы в нижнем колинтуле в центре
+\fancyfoot[C]{\thepage} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{float}
+\usepackage[mode=buildnew]{standalone}
+\usepackage{tikz} 
+% \usepackage{subcaption}
+\usepackage{tikz,csvsimple,physics}
+\makeatother
+%\usepackage{booktabs}
+\usepackage{pgfplots, pgfplotstable}
+\usepackage[outline]{contour}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+%
+%
+%
+%
+%
+\begin{document}
+
+\section*{Обработка результатов измерений и расчёт погрешности углового ускорения \(\gamma_z\)}
+
+\subsection*{1. Расчётная формула для углового ускорения}
+
+В работе угловое ускорение маятника \(\gamma_z\) определяется косвенно — через измерение времени \(t\) опускания разгонного груза с высоты \(h\) при известном радиусе шкива \(r\). Используется формула, связывающая линейное ускорение груза с угловым ускорением маятника (кинематическая связь \(a = \gamma_z r\)):
+
+\[
+a = \frac{2h}{t^2}, \quad \gamma_z = \frac{a}{r} = \frac{2h}{r t^2}. \tag{1}
+\]
+
+Таким образом, \(\gamma_z\) является функцией трёх непосредственно измеряемых величин: высоты \(h\), времени \(t\) и радиуса шкива \(r\).
+
+\subsection*{2. Расчёт погрешности косвенных измерений}
+
+Поскольку \(\gamma_z\) не измеряется непосредственно, а вычисляется по формуле (1), её абсолютная погрешность находится методами теории погрешностей для косвенных измерений. В работе используются два подхода: квадратичный (статистический) и линейный (метод границ).
+
+В общем виде для функции \(f = f(x_1, x_2, \dots, x_n)\) абсолютная погрешность рассчитывается с помощью частных производных, которые показывают чувствительность функции к изменению каждого аргумента.
+
+\subsubsection*{2.1. Частные производные функции \(\gamma_z(h, r, t)\)}
+
+Для применения любого из методов необходимо вычислить частные производные \(\gamma_z\) по каждому аргументу:
+
+\begin{itemize}
+    \item Производная по высоте \(h\):
+    \[
+    \frac{\partial \gamma_z}{\partial h} = \frac{\partial}{\partial h} \left( \frac{2h}{r t^2} \right) = \frac{2}{r t^2}.
+    \]
+    \item Производная по радиусу шкива \(r\):
+    \[
+    \frac{\partial \gamma_z}{\partial r} = \frac{\partial}{\partial r} \left( \frac{2h}{r t^2} \right) = -\frac{2h}{r^2 t^2}.
+    \]
+    \item Производная по времени \(t\):
+    \[
+    \frac{\partial \gamma_z}{\partial t} = \frac{\partial}{\partial t} \left( \frac{2h}{r} t^{-2} \right) = \frac{2h}{r} \cdot (-2) t^{-3} = -\frac{4h}{r t^3}.
+    \]
+\end{itemize}
+
+Знак минус у производных по \(r\) и \(t\) указывает на то, что увеличение этих величин приводит к уменьшению \(\gamma_z\). При расчёте погрешности методом наихудшего случая знак не важен — берётся модуль.
+\[
+\Delta \gamma_z = \left| \frac{2}{r t^2} \right| \Delta h + 
+\left| -\frac{2h}{r^2 t^2} \right| \Delta r + 
+\left| -\frac{4h}{r t^3} \right| \Delta t.
+\]
+
+Так как модуль отрицательного числа даёт положительное, окончательно:
+
+\[
+\boxed{\Delta \gamma_z = \frac{2}{r t^2} \Delta h + \frac{2h}{r^2 t^2} \Delta r + \frac{4h}{r t^3} \Delta t}. \tag{3}
+\]
+
+\textbf{Значения \textit{абсолютных}(маркер - $\Delta$) погрешностей $\Delta t, \Delta h, \Delta r$ нам давались в протоколе} :))
+\subsubsection*{2.2. Квадратичный (статистический) метод, (оно наврное не ненужно)}
+
+Этот метод является более корректным, так как учитывает вероятностный характер случайных погрешностей и предполагает их независимость. Абсолютная погрешность \(\Delta \gamma_z\) рассчитывается как корень квадратный из суммы квадратов вкладов каждой частной погрешности:
+
+\[
+\Delta \gamma_z = \sqrt{ \left( \frac{\partial \gamma_z}{\partial h} \Delta h \right)^2 + \left( \frac{\partial \gamma_z}{\partial r} \Delta r \right)^2 + \left( \frac{\partial \gamma_z}{\partial t} \Delta t \right)^2 }.
+\]
+
+Подставляя выражения для частных производных, получаем рабочую формулу:
+
+\[
+\boxed{\Delta \gamma_z = \sqrt{ \left( \frac{2}{r t^2} \Delta h \right)^2 + \left( -\frac{2h}{r^2 t^2} \Delta r \right)^2 + \left( -\frac{4h}{r t^3} \Delta t \right)^2 }}.
+\]
+
+Так как квадрат отрицательного числа положителен, знаки минус можно опустить:
+
+\[
+\Delta \gamma_z = \sqrt{ \left( \frac{2 \Delta h}{r t^2} \right)^2 + \left( \frac{2h \Delta r}{r^2 t^2} \right)^2 + \left( \frac{4h \Delta t}{r t^3} \right)^2 }. \tag{2}
+\]
+
+\subsubsection*{2.3. Линейный метод (метод наихудшего случая или метод границ)}
+
+Этот метод даёт оценку погрешности «сверху», предполагая, что все частные погрешности складываются в одном направлении (наихудшее сочетание знаков). Абсолютная погрешность находится как сумма модулей вкладов:
+
+\[
+\Delta \gamma_z = \left| \frac{\partial \gamma_z}{\partial h} \right| \Delta h + \left| \frac{\partial \gamma_z}{\partial r} \right| \Delta r + \left| \frac{\partial \gamma_z}{\partial t} \right| \Delta t.
+\]
+
+Подставляя модули частных производных, получаем:
+
+\[
+\boxed{\Delta \gamma_z = \frac{2}{r t^2} \Delta h + \frac{2h}{r^2 t^2} \Delta r + \frac{4h}{r t^3} \Delta t}. \tag{3}
+\]
+
+\subsection*{3. Рекомендации по применению}
+
+\begin{itemize}
+    \item Для окончательной оценки погрешности в лабораторных работах чаще используется **квадратичный метод** (формула (2)), так как он более реалистично отражает влияние случайных ошибок.
+    \item **Линейный метод** (формула (3)) удобен для быстрых оценок или когда погрешности имеют систематический характер и их знаки известны. Он всегда даёт большую (более грубую) оценку по сравнению с квадратичным.
+    \item Погрешности прямых измерений \(\Delta h\), \(\Delta r\) и \(\Delta t\) определяются по классу точности приборов или как приборная погрешность (для \(h\) и \(r\)), либо как случайная погрешность времени (по разбросу измерений \(t\)).
+\end{itemize}
+Абсолютная погрешность для массы $\Delta m = n \cdot \Delta m_1 $
+\end{document}

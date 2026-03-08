@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.1.30)  16 FEB 2026 23:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.1.30)  9 MAR 2026 00:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**labababa.tex
-(./labababa.tex
+**"задача с доски.tex"
+(./задача с доски.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (c:/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -1219,33 +1219,33 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count509
 \@quotereset=\count510
-(./labababa.aux
+(./задача с доски.aux
 Package babel Info: 'russian' activates 'russian' shorthands.
 (babel)             Reported on input line 10.
 )
-\openout1 = `labababa.aux'.
+\openout1 = `"задача с доски.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Info: Redefining \th on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Info: Redefining \th on input line 68.
 Package biblatex Info: Trying to load language 'russian' -> 'russian-gost'...
 Package biblatex Info: ... file 'russian-gost.lbx' found.
  (c:/texlive/2025/texmf-dist/tex/latex/biblatex-gost/russian-gost.lbx
@@ -1277,14 +1277,14 @@ File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout3 = `labababa.bcf'.
+\openout3 = `"задача с доски.bcf"'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'labababa.bbl' not found.
+Package biblatex Info: ... file '"задача с доски".bbl' not found.
 
-No file labababa.bbl.
-Package biblatex Info: Reference section=0 on input line 64.
-Package biblatex Info: Reference segment=0 on input line 64.
+No file "задача с доски".bbl.
+Package biblatex Info: Reference section=0 on input line 68.
+Package biblatex Info: Reference segment=0 on input line 68.
 (c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count511
@@ -1304,10 +1304,10 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 64.
- (./labababa.out) (./labababa.out)
+Package hyperref Info: Link coloring OFF on input line 68.
+ (./задача с доски.out) (./задача с доски.out)
 \@outlinefile=\write6
-\openout6 = `labababa.out'.
+\openout6 = `"задача с доски.out"'.
 
 
 *geometry* driver: auto-detecting
@@ -1346,47 +1346,47 @@ Package hyperref Info: Link coloring OFF on input line 64.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 64.
+ on input line 68.
 
 <<t2a.cmap>><<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (12.82024pt too wide) in paragraph at lines 111--112
-[]\T2A/cmr/m/n/12 �� ���-���-��� ���-��-�� ���-��-��� ���-��-��� ��-��-��-��� ��-��-��-���-��� ���-�� ��-��-��-�� ������-�������� 
+) [1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}
+
+] [2] [3]
+Overfull \hbox (48.87717pt too wide) detected at line 289
+\OT1/cmr/m/n/12 4\OML/cmm/m/it/12 mvV \OT1/cmr/m/n/12 = 6\OML/cmm/m/it/12 mV[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 I \OMS/cmsy/m/n/12 ^^A []\OML/cmm/m/it/12 V[] \OT1/cmr/m/n/12 = 6\OML/cmm/m/it/12 mV[] \OT1/cmr/m/n/12 + [] \OMS/cmsy/m/n/12 ^^A []\OML/cmm/m/it/12 V[] \OT1/cmr/m/n/12 = 6\OML/cmm/m/it/12 mV[] \OT1/cmr/m/n/12 + [] \OMS/cmsy/m/n/12 ^^A []\OML/cmm/m/it/12 mV[] \OT1/cmr/m/n/12 = 6\OML/cmm/m/it/12 mV[] \OT1/cmr/m/n/12 + []\OML/cmm/m/it/12 mV[] \OT1/cmr/m/n/12 = 6\OML/cmm/m/it/12 mV[] \OT1/cmr/m/n/12 + []\OML/cmm/m/it/12 mV[] \OT1/cmr/m/n/12 = []\OML/cmm/m/it/12 mV[]:
  []
 
-[1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}
-
-] [2] [3] [4] [5{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./labababa.aux)
+[4] [5{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./задача с доски.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `labababa.out' has not changed.
-(rerunfilecheck)             Checksum: B7D1335694762D923923B81F53DE8552;101.
-Package logreq Info: Writing requests to 'labababa.run.xml'.
-\openout1 = `labababa.run.xml'.
+Package rerunfilecheck Info: File `"задача с доски".out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package logreq Info: Writing requests to '"задача с доски".run.xml'.
+\openout1 = `"задача с доски.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45716 strings out of 467532
- 1012746 string characters out of 5423647
- 2161527 words of memory out of 5000000
+ 45722 strings out of 467532
+ 1013349 string characters out of 5423647
+ 2161639 words of memory out of 5000000
  73866 multiletter control sequences out of 15000+600000
- 639285 words of font info for 68 fonts, out of 8000000 for 9000
+ 638481 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,12n,121p,733b,3213s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on labababa.pdf (5 pages, 146901 bytes).
+ 125i,14n,121p,753b,3213s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on "задача с доски.pdf" (5 pages, 136973 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 109 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
+ 23 named destinations out of 1000 (max. 500000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

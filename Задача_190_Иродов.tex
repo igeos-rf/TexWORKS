@@ -1,0 +1,138 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{cmap}
+\usepackage[english, russian]{babel}
+\usepackage{wrapfig}
+\usepackage[backend=biber,style=gost-numeric]{biblatex} % стиль ГОСТ
+\addbibresource{literatura.bib}
+\usepackage{misccorr} % в заголовках появляется точка, но при ссылке на них ее нет
+\usepackage{amssymb,amsfonts,amsmath,amsthm}  
+\usepackage{indentfirst}
+\usepackage[usenames,dvipsnames]{color} 
+\usepackage[unicode,hidelinks]{hyperref}
+% \hypersetup{%
+%     pdfborder = {0 0 0}
+\usepackage{multirow}
+\usepackage{makecell,multirow} 
+\usepackage{ulem}
+%\usepackage{hyperref}
+%\usepackage{graphicx,wrapfig}
+%\renewcommand\epsilon{\varepsilon}
+% \renewcommand\epsilon{\varepsilon}
+%\graphicspath{{img/}}
+\usepackage{geometry}
+\geometry{left=1cm,right=1cm,top=2cm,bottom=2cm,bindingoffset=0cm,headheight=15pt}
+\usepackage{fancyhdr} 
+\linespread{1.2} 
+\frenchspacing 
+\renewcommand{\labelenumii}{\theenumii)} 
+% \usepackage{caption}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\labauthor{Сарафанов И.Г.}
+\def\labauthors{\labauthor}
+\def\labnumber{127}
+\def\labtheme{Таблица производных и интегралов}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%применим колонтитул к стилю страницы
+\pagestyle{fancy} 
+	%очистим "шапку" страницы
+\fancyhead{\LaTeX} 
+	%слева сверху на четных и справа на нечетных
+\fancyhead[L]{\labauthors} 
+	%справа сверху на четных и слева на нечетных
+\fancyhead[R]{Яковлев \textnumero 190} 
+	%очистим "подвал" страницы
+\fancyfoot{} 
+	% номер страницы в нижнем колинтуле в центре
+\fancyfoot[C]{\thepage} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{float}
+\usepackage[mode=buildnew]{standalone}
+\usepackage{tikz} 
+% \usepackage{subcaption}
+\usepackage{tikz,csvsimple,physics}
+\makeatother
+%\usepackage{booktabs}
+\usepackage{pgfplots, pgfplotstable}
+\usepackage[outline]{contour}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+
+% вот этот удивительный мир
+
+\begin{document}
+\begin{center}
+    \textbf{Домашняя работа \textnumero 1}
+\end{center}
+
+\textit{Дано: $h = 19{,}6$ м., $S_1=1000$ м., найти $S_2$.}
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+    \draw[->] (0,0) -- (10,0) node[anchor=north] {$x$};
+    \draw[->] (0,0) -- (0,5) node[anchor=east] {$y$};
+    %\draw[thick] (0,4) node[left] {$A$} -- (0,0) node[below] {$O$} -- (4,0) node[below] {$B$};
+    %\draw[dashed] (4,0) -- (4,4) node[right] {$C$};
+    %\node at (2,-0.5) {1000 м};
+    %\node at (-0.5,2) {19.6 м};
+\end{tikzpicture}
+\end{figure}
+
+Из законов кинематики свободного падения получаем:
+\[
+h = \frac{g t^2}{2} \, \Rightarrow \, 19{,}6 = \frac{9{,}8 t^2}{2}
+\, \Rightarrow \,
+t = 2 \text{ c}.
+\]
+
+Горизонтальная скорость снаряда непосредственно перед взрывом:
+\[
+v_x = \frac{1000}{2} = 500 \text{ м/с}.
+\]
+
+Вертикальная скорость первой отколовшейся части:
+\[
+19{,}6 = - v_1 - 4{,}9
+\Rightarrow
+v_1 = 14{,}7 \text{ м/с}.
+\]
+
+По закону \textbf{сохранения импульса:}
+\[
+m v_{1y} + m v_{2y} = 0
+\Rightarrow
+v_{2y} = 14{,}7 \text{ м/с}.
+\]
+
+По горизонтали:
+\[
+m \cdot 0 + m v_{2x} = 2m \cdot 500
+\Rightarrow
+v_{2x} = 1000 \text{ м/с}.
+\]
+
+Из кинематики находим время движения второй части после взрыва:
+\[
+t_2 = 4 \text{ c}.
+\]
+
+Горизонтальное перемещение после взрыва:
+\[
+S = 1000 \cdot 4 = 4000 \text{ м}.
+\]
+
+Полное расстояние:
+\[
+S_2 = 1000 + 4000 = 5000 \text{ м}.
+\]
+
+\[
+\boxed{S_2 = 5000 \text{ м}}
+\]
+
+\end{document}

@@ -1,0 +1,181 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{cmap}
+\usepackage[english, russian]{babel}
+\usepackage{wrapfig}
+\usepackage[backend=biber,style=gost-numeric]{biblatex} % стиль ГОСТ
+\addbibresource{literatura.bib}
+\usepackage{misccorr} % в заголовках появляется точка, но при ссылке на них ее нет
+\usepackage{amssymb,amsfonts,amsmath,amsthm}  
+\usepackage{indentfirst}
+\usepackage[usenames,dvipsnames]{color} 
+\usepackage[unicode,hidelinks]{hyperref}
+% \hypersetup{%
+%     pdfborder = {0 0 0}
+\usepackage{multirow}
+\usepackage{makecell,multirow} 
+\usepackage{ulem}
+%\usepackage{hyperref}
+%\usepackage{graphicx,wrapfig}
+%\renewcommand\epsilon{\varepsilon}
+% \renewcommand\epsilon{\varepsilon}
+%\graphicspath{{img/}}
+\usepackage{geometry}
+\geometry{left=1cm,right=1cm,top=2cm,bottom=2cm,bindingoffset=0cm,headheight=15pt}
+\usepackage{fancyhdr} 
+\linespread{1.2} 
+\frenchspacing 
+\renewcommand{\labelenumii}{\theenumii)} 
+% \usepackage{caption}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\labauthor{Сарафанов И.Г.}
+\def\labauthors{\labauthor}
+\def\labnumber{127}
+\def\labtheme{Таблица производных и интегралов}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%применим колонтитул к стилю страницы
+\pagestyle{fancy} 
+	%очистим "шапку" страницы
+\fancyhead{\LaTeX} 
+	%слева сверху на четных и справа на нечетных
+\fancyhead[L]{\labauthors} 
+	%справа сверху на четных и слева на нечетных
+\fancyhead[R]{Иродов \textnumero 1.185} 
+	%очистим "подвал" страницы
+\fancyfoot{} 
+	% номер страницы в нижнем колинтуле в центре
+\fancyfoot[C]{\thepage} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{float}
+\usepackage[mode=buildnew]{standalone}
+\usepackage{tikz} 
+% \usepackage{subcaption}
+\usepackage{tikz,csvsimple,physics}
+\makeatother
+%\usepackage{booktabs}
+\usepackage{pgfplots, pgfplotstable}
+\usepackage[outline]{contour}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\begin{document}
+\section*{Задача 1.186}
+
+\textbf{Условие:} Найти минимальную скорость нейтрона массы $m$, чтобы при столкновении с покоящимся ядром массы $M$ увеличить его внутреннюю энергию на $\Delta E$.
+
+\bigskip
+
+\textbf{Решение:}
+
+\medskip
+\textbf{Шаг 1. Определяем законы, которые используем.}
+
+Так как процесс неупругий (ядро получает внутреннюю энергию $\Delta E$):
+
+\begin{itemize}
+    \item Сохраняется импульс системы: 
+    \[
+        \vec p_\text{до} = \vec p_\text{после}
+    \]
+    \item Полная энергия сохраняется, но кинетическая энергия частично может перейти во внутреннюю энергию ядра:
+    \[
+        W_\text{полная} = W_\text{мех} + W_\text{внутр}
+    \]
+\end{itemize}
+
+\medskip
+\textbf{Шаг 2. Кинетическая энергия системы до столкновения.}
+
+Нейтрон движется со скоростью $v$, ядро покоится:
+
+\[
+T_\text{до} = \frac{1}{2} m v^2 + \frac{1}{2} M \cdot 0^2 = \frac{1}{2} m v^2
+\]
+
+\medskip
+\textbf{Шаг 3. Разложение энергии через центр масс (теорема Кёнига).}
+
+Скорость центра масс системы:
+
+\[
+V_\text{cm} = \frac{m v + M \cdot 0}{m + M} = \frac{m}{m + M} v
+\]
+
+Скорость нейтрона относительно ядра:
+
+\[
+v_\text{rel} = v - 0 = v
+\]
+
+Полная кинетическая энергия раскладывается на:
+
+\[
+T = \underbrace{\frac{1}{2}(m+M)V_\text{cm}^2}_{T_\text{мех}} + \underbrace{\frac{1}{2} \mu v_\text{rel}^2}_{T_\text{отн}}
+\]
+
+где приведённая масса:
+
+\[
+\mu = \frac{m M}{m + M}
+\]
+
+\medskip
+\textbf{Шаг 4. Вычисляем каждую часть.}
+
+\[
+T_\text{мех} = \frac{1}{2} (m+M) V_\text{cm}^2 = \frac{1}{2} (m+M) \left(\frac{m}{m+M} v\right)^2 = \frac{m^2}{2 (m+M)} v^2
+\]
+
+\[
+T_\text{отн} = \frac{1}{2} \mu v_\text{rel}^2 = \frac{1}{2} \frac{m M}{m+M} v^2
+\]
+
+\medskip
+\textbf{Шаг 5. Связь относительной энергии и внутренней энергии.}
+
+Энергия относительного движения $T_\text{отн}$ может полностью перейти во внутреннюю энергию ядра. Минимальная скорость достигается, когда после столкновения частицы движутся вместе (полностью неупругий удар):
+
+\[
+T_\text{отн} = \Delta E
+\]
+
+Подставляем выражение для $T_\text{отн}$:
+
+\[
+\frac{1}{2} \frac{m M}{m+M} v^2 = \Delta E
+\]
+
+---
+
+\textbf{Шаг 6. Находим минимальную скорость нейтрона.}
+
+\[
+v^2 = \frac{2 \Delta E (m+M)}{m M} 
+\]
+
+\[
+\boxed{v_\text{min} = \sqrt{\frac{2 \Delta E (m+M)}{m M}}}
+\]
+
+---
+
+\textbf{Шаг 7. Физический смысл решения.}
+
+\begin{itemize}
+    \item Движение центра масс системы $V_\text{cm}$ не может быть использовано для возбуждения ядра, оно остаётся механическим. 
+    \item Внутренняя энергия ядра $\Delta E$ может быть получена только за счёт энергии относительного движения $T_\text{отн} = \frac{1}{2} \mu v_\text{rel}^2$. 
+    \item Приведённая масса $\mu$ показывает, какая часть кинетической энергии доступна для преобразования во внутреннюю энергию.
+    \item Если ядро сильно тяжелее нейтрона ($M \gg m$), $\mu \approx m$ и почти вся энергия нейтрона может уйти во внутреннюю энергию.
+\end{itemize}
+
+\bigskip
+\textbf{Ответ:}
+
+\[
+\displaystyle v_\text{min} = \sqrt{\frac{2 \Delta E (m+M)}{m M}}
+\]
+\end{document}

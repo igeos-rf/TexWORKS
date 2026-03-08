@@ -1,0 +1,114 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{cmap}
+\usepackage[english, russian]{babel}
+\usepackage{wrapfig}
+\usepackage[backend=biber,style=gost-numeric]{biblatex} % стиль ГОСТ
+\addbibresource{literatura.bib}
+\usepackage{misccorr} % в заголовках появляется точка, но при ссылке на них ее нет
+\usepackage{amssymb,amsfonts,amsmath,amsthm}  
+\usepackage{indentfirst}
+\usepackage[usenames,dvipsnames]{color} 
+\usepackage[unicode,hidelinks]{hyperref}
+% \hypersetup{%
+%     pdfborder = {0 0 0}
+\usepackage{multirow}
+\usepackage{makecell,multirow} 
+\usepackage{ulem}
+%\usepackage{hyperref}
+%\usepackage{graphicx,wrapfig}
+%\renewcommand\epsilon{\varepsilon}
+% \renewcommand\epsilon{\varepsilon}
+%\graphicspath{{img/}}
+\usepackage{geometry}
+\geometry{left=1cm,right=1cm,top=2cm,bottom=2cm,bindingoffset=0cm,headheight=15pt}
+\usepackage{fancyhdr} 
+\linespread{1.2} 
+\frenchspacing 
+\renewcommand{\labelenumii}{\theenumii)} 
+% \usepackage{caption}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\labauthor{Сарафанов И.Г.}
+\def\labauthors{\labauthor}
+\def\labnumber{127}
+\def\labtheme{Таблица производных и интегралов}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%применим колонтитул к стилю страницы
+\pagestyle{fancy} 
+	%очистим "шапку" страницы
+\fancyhead{\LaTeX} 
+	%слева сверху на четных и справа на нечетных
+\fancyhead[L]{\labauthors} 
+	%справа сверху на четных и слева на нечетных
+\fancyhead[R]{Яковлев \textnumero 237} 
+	%очистим "подвал" страницы
+\fancyfoot{} 
+	% номер страницы в нижнем колинтуле в центре
+\fancyfoot[C]{\thepage} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{float}
+\usepackage[mode=buildnew]{standalone}
+\usepackage{tikz} 
+% \usepackage{subcaption}
+\usepackage{tikz,csvsimple,physics}
+\makeatother
+%\usepackage{booktabs}
+\usepackage{pgfplots, pgfplotstable}
+\usepackage[outline]{contour}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+
+% вот этот удивительный мир
+
+\begin{document}
+
+
+%\textit{Дано: $\textbf{u}$ -- скорость газа относительно ракеты, $\mu$ -- расход газа, показать, что уравнение движения $ma = F - \mu u$ }
+
+\textit{Условие:} На носу лодки длиной $l$ стоит человек, держа на высоте $h$ ядро массы $m$. Масса лодки вместе с человеком равна $M$. Человек бросает горизонтально ядро вдоль лодки. Какую скорость по горизонтали должен сообщить человек ядру, чтобы попасть в корму лодки? Сопротивлением воды движению лодки можно пренебречь.
+
+\vspace{2em}
+До броска общий импульс системы равен нулю. После броска ядро движется со скоростью $v$ относительно лодки, лодка движется со скоростью $V$ в противоположном направлении.
+
+\vspace{1em}
+Из \textbf{закона сохранения импульса} (в проекции на горизонтальную ось):
+\begin{equation}
+    m(v - V) = MV
+\end{equation}
+
+Отсюда находим скорость лодки:
+\begin{equation}
+    V = \frac{mv}{M + m}
+\end{equation}
+
+Скорость ядра относительно воды:
+\begin{equation}
+    v_{\text{ядра}} = v - V = v \cdot \frac{M}{M + m}
+\end{equation}
+
+Ядро падает с высоты $h$ под действием силы тяжести. Время падения:
+\begin{equation}
+    t = \sqrt{\frac{2h}{g}}
+\end{equation}
+
+За время полёта $t$ ядро должно пролететь расстояние $l$ \textit{относительно лодки}:
+\begin{equation}
+    (v - V) \cdot t = l
+\end{equation}
+
+Подставляем выражения для $V$ и $t$:
+\begin{equation}
+    v \cdot \frac{M}{M + m} \cdot \sqrt{\frac{2h}{g}} = l
+\end{equation} 
+
+Отсюда находим необходимую для попадания в корму лодки скорость:
+\begin{equation}
+    \boxed{v = \frac{M + m}{M} \cdot l \sqrt{\frac{g}{2h}}}
+\end{equation}
+
+\end{document}

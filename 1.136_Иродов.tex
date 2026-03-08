@@ -1,0 +1,132 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{cmap}
+\usepackage[english, russian]{babel}
+\usepackage{wrapfig}
+\usepackage[backend=biber,style=gost-numeric]{biblatex} % стиль ГОСТ
+\addbibresource{literatura.bib}
+\usepackage{misccorr} % в заголовках появляется точка, но при ссылке на них ее нет
+\usepackage{amssymb,amsfonts,amsmath,amsthm}  
+\usepackage{indentfirst}
+\usepackage[usenames,dvipsnames]{color} 
+\usepackage[unicode,hidelinks]{hyperref}
+% \hypersetup{%
+%     pdfborder = {0 0 0}
+\usepackage{multirow}
+\usepackage{makecell,multirow} 
+\usepackage{ulem}
+%\usepackage{hyperref}
+%\usepackage{graphicx,wrapfig}
+%\renewcommand\epsilon{\varepsilon}
+% \renewcommand\epsilon{\varepsilon}
+%\graphicspath{{img/}}
+\usepackage{geometry}
+\geometry{left=1cm,right=1cm,top=2cm,bottom=2cm,bindingoffset=0cm,headheight=15pt}
+\usepackage{fancyhdr} 
+\linespread{1.2} 
+\frenchspacing 
+\renewcommand{\labelenumii}{\theenumii)} 
+% \usepackage{caption}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\labauthor{Сарафанов И.Г.}
+\def\labauthors{\labauthor}
+\def\labnumber{127}
+\def\labtheme{Таблица производных и интегралов}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%применим колонтитул к стилю страницы
+\pagestyle{fancy} 
+	%очистим "шапку" страницы
+\fancyhead{\LaTeX} 
+	%слева сверху на четных и справа на нечетных
+\fancyhead[L]{\labauthors} 
+	%справа сверху на четных и слева на нечетных
+\fancyhead[R]{Иродов \textnumero1.136} 
+	%очистим "подвал" страницы
+\fancyfoot{} 
+	% номер страницы в нижнем колинтуле в центре
+\fancyfoot[C]{\thepage} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{float}
+\usepackage[mode=buildnew]{standalone}
+\usepackage{tikz} 
+% \usepackage{subcaption}
+\usepackage{tikz,csvsimple,physics}
+\makeatother
+%\usepackage{booktabs}
+\usepackage{pgfplots, pgfplotstable}
+\usepackage[outline]{contour}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+
+% вот этот удивительный мир
+
+\begin{document}
+\begin{center}
+    \textbf{Домашняя работа \textnumero 3}
+\end{center}
+
+\textit{Дано: $\textbf{u}$ -- скорость газа относительно ракеты, $\mu$ -- расход газа, показать, что уравнение движения $ma = F - \mu u$ }
+
+\vspace{2em}
+Рассмотрим изменение системы за малый промежуток времени $dt$.
+
+В момент времени $t$ импульс ракеты:
+\[
+p(t) = mv.
+\]
+
+За время $dt$ масса ракеты изменяется на $dm$ (где $dm < 0$), скорость --- на $dv$. 
+
+\vspace{1em}
+Масса выброшенного газа: $|dm| = -dm = \mu\,dt$.
+
+\vspace{1em}
+Скорость газа относительно неподвижной системы отсчёта: $v - u$.
+
+\vspace{1em}
+Импульс в момент времени $t + dt$:
+\[
+p(t+dt) = (m + dm)(v + dv) + (-dm)(v - u).
+\]
+
+Раскрываем скобки и пренебрегаем членом второго порядка малости $dm\,dv$:
+\[
+p(t+dt) = mv + m\,dv + v\,dm + dm\,dv - v\,dm + u\,dm \approx mv + m\,dv + u\,dm.
+\]
+
+Изменение импульса:
+\[
+dp = p(t+dt) - p(t) = m\,dv + u\,dm.
+\]
+
+По второму закону Ньютона:
+\[
+dp = F\,dt.
+\]
+
+Получаем:
+\[
+m\,dv + u\,dm = F\,dt.
+\]
+
+Делим на $dt$:
+\[
+m\,\frac{dv}{dt} + u\,\frac{dm}{dt} = F.
+\]
+
+Учитываем, что $\displaystyle\frac{dv}{dt} = a$ и $\displaystyle\frac{dm}{dt} = -\mu$:
+\[
+ma + u(-\mu) = F.
+\]
+
+Отсюда получаем уравнение движения ракеты:
+\[
+\boxed{ma = F - \mu u.}
+\]
+
+\end{document}

@@ -44,10 +44,10 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>labababa.bcf</file>
+      <file>"задача с доски".bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>labababa.bbl</file>
+      <file>"задача с доски".bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -71,19 +71,19 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>labababa</infile>
+      <infile>"задача с доски"</infile>
     </cmdline>
     <input>
-      <file>labababa.bcf</file>
+      <file>"задача с доски".bcf</file>
     </input>
     <output>
-      <file>labababa.bbl</file>
+      <file>"задача с доски".bbl</file>
     </output>
     <provides type="dynamic">
-      <file>labababa.bbl</file>
+      <file>"задача с доски".bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>labababa.bcf</file>
+      <file>"задача с доски".bcf</file>
     </requires>
     <requires type="editable">
       <file>literatura.bib</file>
